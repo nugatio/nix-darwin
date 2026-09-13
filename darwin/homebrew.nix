@@ -10,7 +10,12 @@
       upgrade = true;
     };
 
-    taps = [ "nikitabobko/tap" ];
+    taps = [
+      {
+        name = "nikitabobko/tap";
+        trusted = true;
+      }
+    ];
     casks = [
       "adguard"
       "aerospace"
@@ -25,7 +30,9 @@
       "bettertouchtool"
       "bitwarden"
       "caffeine"
+      "chatgpt"
       "claude"
+      "codex"
       "daisydisk"
       "font-sf-pro"
       "ghostty"
