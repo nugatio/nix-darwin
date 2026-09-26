@@ -11,8 +11,8 @@
     nvd
     nix-index
     nix-your-shell
-    cachix
-    devenv
+    inputs.cachix.packages.${pkgs.system}.cachix
+    inputs.devenv.packages.${pkgs.system}.devenv
     comma
     bun
 

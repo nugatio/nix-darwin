@@ -32,6 +32,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs-firefox-darwin.url = "github:bandithedoge/nixpkgs-firefox-darwin";
+    # Upstream flakes: their builds are in devenv.cachix.org / cachix.cachix.org.
+    # Do NOT add inputs.nixpkgs.follows here, it would change the store paths and miss the cache.
+    devenv.url = "github:cachix/devenv/v2.4.0";
+    cachix.url = "github:cachix/cachix";
   };
 
 
