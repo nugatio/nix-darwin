@@ -8,13 +8,13 @@
 :root {
   --tab-min-height: 24px !important;
   --tab-min-width: 24px !important;
-  --color-outline: rgba(255,255,255,0.25);
+  --color-outline: rgba(255, 255, 255, 0.25);
   --urlbar-min-height: 24px !important;
   --tab-label-line-height: 1 !important;
-  --tab-block-margin: 0px !important;
+  --tab-margin-block: 0px !important;
   --toolbarbutton-inner-padding: 5px !important;
-  --tab-pinned-expanded-background-width: 24x !important;
-  --urlbar-container-height: 24.00px !important;
+  --tab-background-width-pinned-expanded: 24px !important;
+  --urlbar-container-height: 24px !important;
   --urlbar-margin-inline: 0px !important;
 }
 
@@ -31,7 +31,8 @@
   display: none;
 }
 
-.tab-background, .tab-label-container {
+.tab-background,
+.tab-label-container {
   padding: 0px !important;
   margin: 0px !important;
   border-radius: 0 !important;
@@ -42,22 +43,24 @@
   display: none;
 }
 
-#tabs-newtab-button, #alltabs-button, #new-tab-button {
+#tabs-newtab-button,
+#alltabs-button,
+#new-tab-button {
   display: none;
 }
 
-.private-browsing-indicator-with-label{
+.private-browsing-indicator-with-label {
   margin: none !important;
   padding: none !important;
 }
 
 #TabsToolbar {
-    border-bottom: solid 1px var(--color-outline);
+  border-bottom: solid 1px var(--color-outline);
 }
 
 .tab-text {
-    font-family: SF Pro !important;
-    font-size: 11px !important;
+  font-family: SF Pro !important;
+  font-size: 11px !important;
 }
 
 .tab-label-container {
@@ -72,49 +75,55 @@
 
 /* tab separator lines */
 
-.tabbrowser-tab{
+.tabbrowser-tab {
   border-inline-start: 1px solid transparent !important;
-  border-image: 0 1 linear-gradient(
-    var(--color-outline) 0%,
-    var(--color-outline) 100%
-  ) !important;
+  border-image: 0 1 linear-gradient(var(--color-outline) 0%, var(--color-outline) 100%) !important;
 }
 
 .tabbrowser-tab:hover,
-#tabbrowser-tabs:not([movingtab]) .tabbrowser-tab:hover + .tabbrowser-tab:not([first-visible-unpinned-tab]),
+#tabbrowser-tabs:not([movingtab])
+  .tabbrowser-tab:hover
+  + .tabbrowser-tab:not([first-visible-unpinned-tab]),
 .tabbrowser-tab:first-child,
 .tabbrowser-tab[selected],
 .tabbrowser-tab[multiselected],
-.tabbrowser-tab:is([selected],[multiselected]) + .tabbrowser-tab[hidden] + .tabbrowser-tab,
+.tabbrowser-tab:is([selected], [multiselected]) + .tabbrowser-tab[hidden] + .tabbrowser-tab,
 #tabbrowser-arrowscrollbox[overflowing] > .tabbrowser-tab[first-visible-unpinned-tab],
 #tabbrowser-tabs:not([movingtab]) .tabbrowser-tab[multiselected] + .tabbrowser-tab,
-#tabbrowser-tabs:not([movingtab]) .tabbrowser-tab[selected] + .tabbrowser-tab { border-image: none !important; }
+#tabbrowser-tabs:not([movingtab]) .tabbrowser-tab[selected] + .tabbrowser-tab {
+  border-image: none !important;
+}
 
 /* centered tab label */
 
-.tab-label-container{
+.tab-label-container {
   display: grid;
   align-content: center;
 }
 
-.tab-secondary-label{
+.tab-secondary-label {
   justify-content: center;
 }
 
 .tab-label,
-.tab-secondary-label{ overflow: hidden }
+.tab-secondary-label {
+  overflow: hidden;
+}
 
 .tabbrowser-tab[selected]:not(:hover) .tab-label-container:not([labeldirection="rtl"]),
-#tabbrowser-tabs:not([closebuttons="activetab"]) .tabbrowser-tab:not(:hover,[pinned]) .tab-label-container:not([labeldirection="rtl"]){
+#tabbrowser-tabs:not([closebuttons="activetab"])
+  .tabbrowser-tab:not(:hover, [pinned])
+  .tab-label-container:not([labeldirection="rtl"]) {
   margin-inline-end: 6px;
 }
 
 /* hide tabs scrollbuttons */
 
-
 /* ## Browser Toolbar ## */
 
-#back-button, #forward-button,#stop-reload-button {
+#back-button,
+#forward-button,
+#stop-reload-button {
   display: none !important;
 }
 
@@ -127,7 +136,9 @@
   display: none !important;
 }
 
-#urlbar-container, #urlbar-background, .urlbar-input-container {
+#urlbar-container,
+#urlbar-background,
+.urlbar-input-container {
   margin: 0px !important;
   border: none;
   border-radius: 0 !important;
@@ -161,7 +172,7 @@
 
 .urlbarView-row-inner {
   padding-top: 2px !important;
-  padding-bottom: 2px !important; 
+  padding-bottom: 2px !important;
   padding-left: 8.5px !important;
   padding-right: 8.5px !important;
 }
@@ -192,9 +203,9 @@
   margin-right: 8.5px !important;
 }
 
-.urlbarView-body-inner{
-  border-top: solid 0.5px rgba(255,255,255,0.1) !important;
-  border-bottom: solid 1px rgba(255,255,255,0.25) !important;
+.urlbarView-body-inner {
+  border-top: solid 0.5px rgba(255, 255, 255, 0.1) !important;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.25) !important;
 }
 
 .urlbarView-no-wrap {
