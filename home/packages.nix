@@ -22,9 +22,9 @@
     inputs.antigravity-nix.packages.${pkgs.system}.google-antigravity-cli
     gemini-cli
     claude-code
-    (aider-chat.overrideAttrs (oldAttrs: {
-      doCheck = false;
-    }))
+    # (aider-chat.overrideAttrs (oldAttrs: {
+    #   doInstallCheck = false;
+    # }))
     fabric-ai
     aichat
     (goose-cli.overrideAttrs (oldAttrs: {
